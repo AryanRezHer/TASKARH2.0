@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+                <div class="form">
+                    <h4>LISTA DE TAREAS</h4>
+                        <form action="/addtask" method="POST">
+                            <input type="text" name="envio" placeholder="Añadir Tarea" class="controls" autofocus>
+                            <button type="submit" class="botons">
+                                Añadir Tarea
+                            </button>
+                        </form>
+                        <ul>
+                            {% for i in lista %}
+                                <li class="tareas">
+                                    <span class="{% if i.done %}done{% endif %}">{{ i.content }}</span>
+                                    <a class="completado" href="/donetask/{{i.id}}">Completada</a>
+                                    <a class="delete" href="/deltask/{{i.id}}">Borrar Tarea</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <a class="logout" href="/logout">Cerrar Sesion</a>
+                </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <body>
+        <form class="form" action="/singup" method="POST">
+            <h4>Formulario Registro</h4>
+            <input class="controls" type="text" name="username" id="nombres" placeholder="Ingrese Nombre de usuario">
+            <input class="controls" type="password" name="password" id="correo" placeholder="Ingrese su Contraseña">
+            <input class="botons" type="submit" value="Registrar">
+            <p><a href="/">¿Ya tengo Cuenta?</a></p>
+            {% if mensaje %}
+                <p>{{ mensaje }}</p>
+                {% endif %}
+        </form>
+    </body>
+{% endblock %}

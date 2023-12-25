@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<body>
+    <body>
+        <form class="form" action="{{ url_for('login') }}" method="POST">
+            <h4>Inicio de sesión</h4>
+            <input class="controls" type="text" name="username" id="nombres" placeholder="Ingrese Nombre de usuario">
+            <input class="controls" type="password" name="password" id="correo" placeholder="Ingrese su Contraseña">
+            <input class="botons" type="submit" value="Iniciar Sesión">
+            <p><a href="/singup">¿Registrarse?</a>
+        </form>
+    </body>
+</body>
+{% endblock %}
