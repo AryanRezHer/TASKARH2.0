@@ -9,93 +9,13 @@
     background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
-  
-  .form {
-    width: 400px;
-    background: #24303c;
-    padding: 30px;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: white;
-    box-shadow: 7px 13px 37px #000;
-  }
-  
-  .form h4 {
-    font-size: 22px;
-    margin-bottom: 20px;
+
+  .centrado{
     text-align: center;
-  }
-  
-  .controls {
-    width: 100%;
-    background: #24303c;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: 'calibri';
-    font-size: 18px;
-    color: white;
-  }
-  
-  .form p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 40px;
-  }
-  
-  .form a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .form a:hover {
-    color: white;
-    text-decoration: underline;
+    vertical-align: middle;
   }
 
-  .form .botons {
-    width: 100%;
-    background: #1f53c5;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-  }
-
-  a.completado{
-    background: green;
-    color: white;
-    border-radius: 4px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  a.delete{
-    background: red;
-    color: white;
-    border-radius: 4px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-li.tareas{
-    margin-bottom: 10px;
-}
-.done{
+  .done{
     text-decoration: line-through;
     color: #cfcfcf;
-}
-
-a.logout{
-    color: white;
-    border-radius: 4px;
-    display: flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

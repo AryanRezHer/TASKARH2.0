@@ -7,7 +7,7 @@ app = Flask(__name__)
 #Path para encontrar la base de datos(primero obtenemos donde estamos y despues añadimos el nombre de los archivos)
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'database', 'usuarios.db')
-app.secret_key = 'ptoyecto2'
+app.secret_key = 'proyecto2'
 
 #Inicializamos Flask-Login
 login_manager = LoginManager()
@@ -40,10 +40,15 @@ def login():
         usr = request.form['username'] #recibimos los valores de los inputs
         pwd = request.form['password']
         if usr and pwd:
-            usuario = usuarios.query.filter_by(username=usr,password=pwd).first() #el primero que encuentre
-            user_id = usuario.id
-            login_user(usuario)
-            return redirect(url_for('listas', id=user_id))
+            try:
+                usuario = usuarios.query.filter_by(username=usr,password=pwd).first() #el primero que encuentre
+                user_id = usuario.id
+                login_user(usuario)
+                return redirect(url_for('listas', id=user_id))
+            except AttributeError:
+                mensaje = 'No esta en la DB. Por favor, registrate'               
+                return render_template('singup.html', mensaje = mensaje)
+            
         
     return render_template('index.html')
     
@@ -66,8 +71,9 @@ def singup(): #Registramos usuario en BD
 @app.route('/logout')
 @login_required #obligatorio estar logeado
 def logout():
+    message = 'Adios ' + current_user.username + ' ;('
     logout_user()
-    return redirect(url_for('login'))
+    return render_template('index.html', message = message)
 
 @app.route('/listas/<int:id>')
 @login_required
