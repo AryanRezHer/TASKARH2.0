@@ -48,7 +48,7 @@ Este proyecto ofrece a los desarrolladores Full-Stack Junior la oportunidad de a
   - HTML: Utilizaremos HTML para estructurar el contenido de nuestras páginas web, definiendo la información y su presentación. ✔️
   - CSS: Aplicaremos CSS para estilizar nuestras páginas web y garantizar una experiencia de usuario agradable. ✔️
     (BOOTSTRAP FRAMEWORK para mejorar la apariencia visual de nuestra aplicación con componentes y estilos predefinidos.)
-  - JavaScript: Aprovecharemos JavaScript para agregar interactividad a nuestra aplicación, permitiendo operaciones dinámicas como la actualización en tiempo real de las tareas y la mejora de la experiencia del usuario. ✖️
+  - JavaScript: Aprovecharemos JavaScript para agregar interactividad a nuestra aplicación, permitiendo operaciones dinámicas como la actualización en tiempo real de las tareas y la mejora de la experiencia del usuario. ✔️ (JS de BOOSTRAP)
 
 - **Backend:**
   - Python con Flask utilizaremos el lenguaje de programación Python para el desarrollo del backend de nuestra aplicación.✔️
